@@ -5,7 +5,7 @@ const map = new Map()
 function useFetch(url: string, options?: any) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<any>(null);
   // const [controller, setController] = useState<AbortController | null>(null)
   const [reqKey, setReqKey] = useState('');
 
@@ -48,7 +48,11 @@ function useFetch(url: string, options?: any) {
 
       setData(result);
     } catch (error: any) {
-      setError(error?.message);
+      if (error.name === 'AbortError') {
+        setError(`请求被取消啦: ${key}`);
+      } else {
+        setError(error?.message);
+      }
     } finally {
       setLoading(false);
       map.delete(key)
