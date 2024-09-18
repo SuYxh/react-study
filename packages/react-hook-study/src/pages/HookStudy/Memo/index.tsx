@@ -1,12 +1,13 @@
 import { FC, useState, useMemo } from "react";
 import { Button } from "antd";
 
-const Chiuld = () => {
+const Chiuld = (props) => {
   const [state, setState] = useState(Math.random())
 
   return (
     <div>
       子组件state: { state }
+      <p>pow: { props.pow }</p>
     </div>
   )
 }
@@ -47,7 +48,7 @@ const Index: FC<any> = () => {
         add
       </Button>
 
-      <Chiuld></Chiuld>
+      <Chiuld pow={pow}></Chiuld>
     </div>
   );
 };

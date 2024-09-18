@@ -5,7 +5,7 @@ import { countContext } from "./context";
 import { Button } from "antd";
 
 const Index: FC<any> = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(999);
 
   return (
     <div>

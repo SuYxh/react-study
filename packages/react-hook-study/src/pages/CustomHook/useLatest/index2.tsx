@@ -8,9 +8,9 @@ const Index: FC<any> = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setCount(ref.current + 1);
       console.log("count:", count);
       console.log("ref:", ref);
-      setCount(ref.current + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, []);

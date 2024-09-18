@@ -16,8 +16,10 @@
 // import Unmount from './pages/CustomHook/useUnmount/index';
 // import Update from './pages/CustomHook/useUpdate/index';
 // import Creation from './pages/CustomHook/useCreation/index';
-import Reactive from './pages/CustomHook/useReactive/index';
+// import Reactive from './pages/CustomHook/useReactive/index';
 
+/** 其他 Hook */
+import Closure from './Closure';
 
 function App() {
 
@@ -41,7 +43,9 @@ function App() {
       {/* <Unmount></Unmount> */}
       {/* <Update></Update> */}
       {/* <Creation></Creation> */}
-      <Reactive></Reactive>
+      {/* <Reactive></Reactive> */}
+
+      <Closure></Closure>
     </>
   )
 }

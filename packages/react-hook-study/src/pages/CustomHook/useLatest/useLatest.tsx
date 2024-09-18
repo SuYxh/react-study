@@ -1,6 +1,7 @@
 import { useRef } from "react";
 
 const useLatest = <T,>(value: T): { readonly current: T } => {
+  console.log('useLatest 执行')
   const ref = useRef(value);
   ref.current = value;
 
