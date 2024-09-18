@@ -11,13 +11,30 @@ const delay = time => {
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    await delay(300);
+    await delay(3000);
 
     // ctx.status = 500;
 
     ctx.body = {
       code: 0,
       data: 'hi, egg',
+      msg: '',
+    };
+
+    // ctx.body = {
+    //   code: -2,
+    //   data: '',
+    //   msg: '未登录',
+    // };
+  }
+
+  async handle1() {
+    const { ctx } = this;
+    await delay(1300);
+
+    ctx.body = {
+      code: 0,
+      data: 'post',
       msg: '',
     };
 

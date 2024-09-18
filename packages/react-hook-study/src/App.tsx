@@ -20,7 +20,8 @@
 
 /** 其他 Hook */
 // import Closure from './Closure';
-import Fetch from './pages/Fetch/index';
+// import Fetch from './pages/Fetch/index';
+import FetchPro from './pages/FetchPro/index';
 
 function App() {
 
@@ -48,7 +49,7 @@ function App() {
 
       {/* <Closure></Closure> */}
 
-      <Fetch></Fetch>
+      <FetchPro></FetchPro>
     </>
   )
 }

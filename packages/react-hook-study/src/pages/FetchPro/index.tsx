@@ -1,29 +1,26 @@
 import { useState } from 'react';
-import { useFetch } from './useFetch';
+import useFetch1 from './useFetch2';
 
 const FetchTest = () => {
 
-  const [options, setOptons] = useState({})
-  const { data, loading, error, refresh, cancel } = useFetch('http://127.0.0.1:7001/', options)
+  const [options, setOptons] = useState<any>({
+  })
+  const { data, loading, error, refresh, cancel } = useFetch1('http://127.0.0.1:7001/', options)
 
   if (loading) {
-    return <div>
+    return (
+      <div>
       loading...
       <button onClick={cancel}>cancel</button>
       </div>
+    )
   }
 
   if (error) {
     return <div>error: { JSON.stringify(error) }</div>
   }
 
-  const handleMutil = () => {
-    for (let index = 0; index < 5; index++) {
-      refresh()
-    }
-  }
-
-  const update = () => {
+  const updateOptions = () => {
     setOptons({})
   }
 
@@ -34,11 +31,9 @@ const FetchTest = () => {
 
       <br />
       <br />
-      <br />
 
       <button onClick={refresh}>刷新</button>
-      <button onClick={update}>update</button>
-      <button onClick={handleMutil}>handleMutil</button>
+      <button onClick={updateOptions}>updateOptions</button>
     </div>
   )
 }
