@@ -10,6 +10,11 @@ module.exports = appInfo => {
    **/
   const config = exports = {};
 
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1726645756716_4555';
 

@@ -19,7 +19,8 @@
 // import Reactive from './pages/CustomHook/useReactive/index';
 
 /** 其他 Hook */
-import Closure from './Closure';
+// import Closure from './Closure';
+import Fetch from './pages/Fetch/index';
 
 function App() {
 
@@ -45,7 +46,9 @@ function App() {
       {/* <Creation></Creation> */}
       {/* <Reactive></Reactive> */}
 
-      <Closure></Closure>
+      {/* <Closure></Closure> */}
+
+      <Fetch></Fetch>
     </>
   )
 }
