@@ -1,10 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export function useFetch(url: string, options?: any, isAuto?: boolean) {
-  if (isAuto == null) {
-    isAuto = true
-  }
-
+export function useFetch(url: string, options?: any) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -66,9 +62,7 @@ export function useFetch(url: string, options?: any, isAuto?: boolean) {
   }, [controller]);
 
   useEffect(() => {
-    if (isAuto) {
-      http();
-    }
+    http();
 
     // 组件卸载时取消请求
     return () => {
@@ -76,7 +70,7 @@ export function useFetch(url: string, options?: any, isAuto?: boolean) {
         controller.abort();
       }
     };
-  }, [http, isAuto]);
+  }, [http]);
 
   return {
     data,

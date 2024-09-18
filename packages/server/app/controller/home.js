@@ -11,7 +11,7 @@ const delay = time => {
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    await delay(3000);
+    await delay(300);
 
     // ctx.status = 500;
 

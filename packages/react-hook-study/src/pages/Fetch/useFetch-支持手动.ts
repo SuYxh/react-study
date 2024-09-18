@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 export function useFetch(url: string, options?: any, isAuto?: boolean) {
+  console.log('-->', null == undefined);
   if (isAuto == null) {
     isAuto = true
   }

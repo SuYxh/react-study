@@ -1,7 +1,7 @@
 import { useFetch } from './useFetch';
 
 const FetchTest = () => {
-  const { data, loading, error, refresh, cancel } = useFetch('http://127.0.0.1:7001/')
+  const { data, loading, error, refresh, cancel } = useFetch('http://127.0.0.1:7001/', {}, false)
 
   if (loading) {
     return <div>
