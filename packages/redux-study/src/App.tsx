@@ -8,9 +8,13 @@
 // import store from "./pages/reduxjs-toolkit/store";
 
 // mobx
-import { Provider } from "mobx-react";
-import rootStore from "./pages/mobx-base/stores/index";
-import MobxBase from './pages/mobx-base/Comp'
+// import { Provider } from "mobx-react";
+// import rootStore from "./pages/mobx-base/stores/index";
+// import MobxBase from './pages/mobx-base/Comp'
+
+
+// zustand
+import ZustandBase from './pages/zustand-base/Comp'
 
 function App() {
   return (
@@ -26,9 +30,11 @@ function App() {
         <ReduxjsToolkit></ReduxjsToolkit>
       </Provider>, */}
 
-      <Provider {...rootStore}>
+      {/* <Provider {...rootStore}>
         <MobxBase />
-      </Provider>
+      </Provider> */}
+
+      <ZustandBase></ZustandBase>
     </>
   );
 }

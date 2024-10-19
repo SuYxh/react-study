@@ -93,6 +93,7 @@ importers:
       redux-thunk: 2.3.0
       typescript: ^5.2.2
       vite: ^5.2.0
+      zustand: ^5.0.0
     dependencies:
       '@reduxjs/toolkit': 2.3.0_irch7jnnqrn7hjrrnjtulxh6lm
       '@welldone-software/why-did-you-render': 8.0.1_react@18.3.1
@@ -106,6 +107,7 @@ importers:
       react-router-dom: 6.23.0_nnrd3gsncyragczmpvfhocinkq
       redux: 5.0.1
       redux-thunk: 2.3.0_redux@5.0.1
+      zustand: 5.0.0_omxgp22l5i4odgutx2pskcopxu
     devDependencies:
       '@types/react': 18.3.1
       '@types/react-dom': 18.3.0
@@ -4486,3 +4488,25 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zustand/5.0.0_omxgp22l5i4odgutx2pskcopxu:
+    resolution: {integrity: sha512-LE+VcmbartOPM+auOjCCLQOsQ05zUTp8RkgwRzefUk+2jISdMMFnxvyTjA4YNWr5ZGXYbVsEMZosttuxUBkojQ==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+    dependencies:
+      '@types/react': 18.3.1
+      react: 18.3.1
+    dev: false
