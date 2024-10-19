@@ -4,7 +4,7 @@
 
 - redux
 - react-redux
-- 
+- `@reduxjs/toolkit`
 
 
 
@@ -18,3 +18,14 @@
 
 
 
+2、`@reduxjs/toolkit` 用 AI 学习的
+
+
+
+3、这几个课程都有 redux 相关用法
+
+https://coding.imooc.com/class/chapter/646.html#Anchor 
+
+https://coding.imooc.com/class/chapter/475.html#Anchor
+
+https://coding.imooc.com/class/chapter/602.html#Anchor
